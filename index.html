@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath - Career Guidance Platform</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: #41034a;
+            color: #5e0bda;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            padding: 18px 7%;
+            background: rgb(86, 3, 105);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #4f46e5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #a005ab;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4f46e5;
+        }
+
+        .login-btn {
+            padding: 10px 20px;
+            background: #4f46e5;
+            color: white !important;
+            border-radius: 8px;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 70px 8%;
+            background: linear-gradient(135deg, #f3f0f2, #f7f4f6);
+        }
+
+        .hero-text {
+            width: 55%;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #4f46e5;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .primary-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(79,70,229,0.25);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            background: #4338ca;
+        }
+
+        .hero-card {
+            width: 350px;
+            padding: 35px;
+            background: rgb(132, 46, 165);
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(79,70,229,0.15);
+        }
+
+        .hero-card h3 {
+            margin-bottom: 20px;
+            color: #4f46e5;
+        }
+
+        .career-item {
+            padding: 15px;
+            margin: 12px 0;
+            background: #f5f7ff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* COMMON SECTION */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        /* LOGIN */
+        .login-section {
+            background: #111827;
+        }
+
+        .login-box {
+            max-width: 430px;
+            margin: auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #4f46e5;
+        }
+
+        .input-box {
+            margin-bottom: 18px;
+        }
+
+        .input-box label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .input-box input:focus {
+            border-color: #4f46e5;
+        }
+
+        .login-box button {
+            width: 100%;
+            border: none;
+            padding: 14px;
+            background: #4f46e5;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* DASHBOARD */
+        .dashboard {
+            background: #f8fafc;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .dashboard-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            background: #eef2ff;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .dashboard-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* CAREER */
+        .career-section {
+            background: white;
+        }
+
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .career-card {
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .career-card:hover {
+            border-color: #4f46e5;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(79,70,229,0.12);
+        }
+
+        .career-card .emoji {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .career-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .career-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* ROADMAP */
+        .roadmap {
+            background: #f5f7ff;
+        }
+
+        .roadmap-container {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .roadmap-container::before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #c7d2fe;
+        }
+
+        .step {
+            position: relative;
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .step-number {
+            min-width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #4f46e5;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            z-index: 2;
+        }
+
+        .step-content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            flex: 1;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .step-content h3 {
+            color: #4f46e5;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: #6b7280;
+        }
+
+        /* SKILLS */
+        .skills-section {
+            background: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 25px;
+            border-radius: 16px;
+            background: #f8fafc;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .skill-card ul {
+            list-style: none;
+        }
+
+        .skill-card li {
+            padding: 9px 0;
+            color: #4b5563;
+        }
+
+        .skill-card li::before {
+            content: "✓";
+            color: #4f46e5;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* PROGRESS */
+        .progress-section {
+            background: #111827;
+            color: white;
+        }
+
+        .progress-section .section-title h2 {
+            color: white;
+        }
+
+        .progress-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .progress-item {
+            margin-bottom: 28px;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            height: 12px;
+            background: #374151;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0b1120;
+            color: #9ca3af;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .dashboard-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .career-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                display: none;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero {
+                padding: 60px 5%;
+            }
+
+            .hero-card {
+                width: 100%;
+            }
+
+            .dashboard-grid,
+            .skills-grid,
+            .career-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">CareerPath</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#skills">Resources</a></li>
+            <li><a href="#progress">Progress</a></li>
+        </ul>
+
+        <a href="#login" class="login-btn">Login</a>
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <h1>
+                Build Your <span>Dream Career</span>
+                Step by Step
+            </h1>
+
+            <p>
+                Discover the right career path, learn the required skills,
+                follow a personalized roadmap and track your progress
+                — all in one place.
+            </p>
+
+            <a href="#career" class="primary-btn">
+                Explore Careers →
+            </a>
+        </div>
+
+        <div class="hero-card">
+            <h3>🚀 Career Journey</h3>
+
+            <div class="career-item">
+                <span>🎯 Choose Career</span>
+                <b>01</b>
+            </div>
+
+            <div class="career-item">
+                <span>🗺️ Roadmap</span>
+                <b>02</b>
+            </div>
+
+            <div class="career-item">
+                <span>📚 Learn Skills</span>
+                <b>03</b>
+            </div>
+
+            <div class="career-item">
+                <span>📈 Track Progress</span>
+                <b>04</b>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN / REGISTER -->
+    <section class="login-section" id="login">
+
+        <div class="section-title">
+            <h2 style="color:white;">Login / Register</h2>
+            <p style="color:#9ca3af;">
+                Start your personalized career journey
+            </p>
+        </div>
+
+        <div class="login-box">
+
+            <h2>Welcome Back 👋</h2>
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password">
+            </div>
+
+            <button>Login</button>
+
+            <p style="text-align:center; margin-top:18px; color:#6b7280;">
+                Don't have an account?
+                <span style="color:#4f46e5; font-weight:bold;">
+                    Register
+                </span>
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- DASHBOARD -->
+    <section class="dashboard" id="dashboard">
+
+        <div class="section-title">
+            <h2>Dashboard</h2>
+            <p>Your career journey at a glance</p>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+                <div class="icon">🎯</div>
+                <h3>Career Goal</h3>
+                <p>
+                    Choose and manage your target career based
+                    on your interests and skills.
+                </p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="icon">🗺️</div>
+                <h3>Career Roadmap</h3>
+                <p>
+                    Follow a step-by-step roadmap to reach
+                    your professional goal.
+                </p>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="icon">📊</div>
+                <h3>Progress</h3>
+                <p>
+                    Track your learning progress and see
+                    how close you are to your goal.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CHOOSE CAREER -->
+    <section class="career-section" id="career">
+
+        <div class="section-title">
+            <h2>Choose Your Career</h2>
+            <p>Select a career path that matches your interests</p>
+        </div>
+
+        <div class="career-grid">
+
+            <div class="career-card">
+                <div class="emoji">💻</div>
+                <h3>Web Developer</h3>
+                <p>Build websites and modern web applications.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="emoji">📊</div>
+                <h3>Data Analyst</h3>
+                <p>Analyze data and generate useful insights.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="emoji">🤖</div>
+                <h3>AI / ML Engineer</h3>
+                <p>Work with artificial intelligence and machine learning.</p>
+            </div>
+
+            <div class="career-card">
+                <div class="emoji">🎨</div>
+                <h3>UI/UX Designer</h3>
+                <p>Create beautiful and user-friendly digital experiences.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CAREER ROADMAP -->
+    <section class="roadmap" id="roadmap">
+
+        <div class="section-title">
+            <h2>Career Roadmap</h2>
+            <p>Example roadmap for becoming a Web Developer</p>
+        </div>
+
+        <div class="roadmap-container">
+
+            <div class="step">
+                <div class="step-number">1</div>
+
+                <div class="step-content">
+                    <h3>Learn HTML & CSS</h3>
+                    <p>
+                        Understand webpage structure, styling,
+                        layouts and responsive design.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+
+                <div class="step-content">
+                    <h3>Learn JavaScript</h3>
+                    <p>
+                        Learn programming fundamentals,
+                        DOM manipulation and interactive websites.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+
+                <div class="step-content">
+                    <h3>Learn a Framework</h3>
+                    <p>
+                        Explore technologies like React,
+                        Vue or Angular.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+
+                <div class="step-content">
+                    <h3>Build Projects</h3>
+                    <p>
+                        Create real-world projects and build
+                        a strong portfolio.
+                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+
+                <div class="step-content">
+                    <h3>Get Job Ready</h3>
+                    <p>
+                        Prepare your resume, GitHub profile,
+                        interview skills and apply for jobs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS & RESOURCES -->
+    <section class="skills-section" id="skills">
+
+        <div class="section-title">
+            <h2>Skills & Resources</h2>
+            <p>Learn the skills required for your career</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>🌐 Frontend Skills</h3>
+
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>⚙️ Development Tools</h3>
+
+                <ul>
+                    <li>Git & GitHub</li>
+                    <li>VS Code</li>
+                    <li>Chrome DevTools</li>
+                    <li>npm</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>📚 Learning Resources</h3>
+
+                <ul>
+                    <li>Online Courses</li>
+                    <li>Documentation</li>
+                    <li>Practice Projects</li>
+                    <li>Interview Questions</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROGRESS -->
+    <section class="progress-section" id="progress">
+
+        <div class="section-title">
+            <h2>My Progress</h2>
+            <p style="color:#9ca3af;">
+                Track your learning journey
+            </p>
+        </div>
+
+        <div class="progress-container">
+
+            <div class="progress-item">
+                <div class="progress-info">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width:90%;"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-info">
+                    <span>CSS</span>
+                    <span>75%</span>
+                </div
