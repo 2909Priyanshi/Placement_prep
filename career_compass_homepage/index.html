@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Career Compass helps students plan career roadmaps, practice skills, and prepare for placements.">
+  <title>Career Compass | Find Your Direction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Career Compass home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M25.8 12.5 22 22l-9.8 5.5 3.8-9.5z" fill="currentColor"/>
+            <circle cx="20" cy="20" r="2" fill="#fff"/>
+          </svg>
+        </span>
+        <span>Career<span class="brand-accent">Compass</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#roadmaps">Career Roadmaps</a>
+        <a class="nav-link" href="#features">Preparation</a>
+        <a class="nav-link" href="#how-it-works">How It Works</a>
+        <a class="nav-cta" href="#roadmaps">Explore Careers <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAREER, WITH A CLEAR DIRECTION</div>
+          <h1>Your future starts with <span class="gradient-text">a clear path.</span></h1>
+          <p class="hero-description">Confused about what to learn for placements? Discover career paths, build the right skills, and prepare for your next opportunity — one step at a time.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#roadmaps">Explore Career Paths <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#how-it-works"><span class="play-icon" aria-hidden="true">▶</span> See how it works</a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-avatars" aria-hidden="true"><span>👩🏻‍💻</span><span>👨🏽‍💻</span><span>👩🏽‍🎓</span></div>
+            <p><strong>Learn with purpose.</strong><br><span>Build skills that move you forward.</span></p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Illustration of a student following a career roadmap">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="visual-card main-visual-card">
+            <div class="visual-card-top"><span class="tiny-label">YOUR ROADMAP</span><span class="status-pill"><span></span> IN PROGRESS</span></div>
+            <div class="roadmap-heading">
+              <div class="code-icon">&lt;/&gt;</div>
+              <div><h3>Backend Developer</h3><p>From learner to job-ready</p></div>
+            </div>
+            <div class="progress-line"><span></span></div>
+            <div class="progress-caption"><span>Learning progress</span><strong>60%</strong></div>
+            <div class="mini-roadmap">
+              <div class="roadmap-step complete"><span class="step-check">✓</span><div><strong>Programming fundamentals</strong><small>Java basics and OOP</small></div><span class="step-state">Done</span></div>
+              <div class="roadmap-step complete"><span class="step-check">✓</span><div><strong>Problem solving</strong><small>DSA practice</small></div><span class="step-state">Done</span></div>
+              <div class="roadmap-step current"><span class="step-number">03</span><div><strong>Backend development</strong><small>APIs, Spring Boot, SQL</small></div><span class="step-current">Now</span></div>
+              <div class="roadmap-step"><span class="step-number">04</span><div><strong>Build projects</strong><small>Apply what you learn</small></div></div>
+            </div>
+          </div>
+          <div class="floating-note note-top"><span class="note-icon note-purple">✦</span><div><strong>One step at a time</strong><small>Your plan, made clearer</small></div></div>
+          <div class="floating-note note-bottom"><span class="note-icon note-green">✓</span><div><strong>Keep moving forward</strong><small>Every skill counts</small></div></div>
+          <span class="decor-star star-one">✳</span><span class="decor-star star-two">✦</span>
+        </div>
+      </div>
+      <div class="container hero-bottom">
+        <span>LESS GUESSWORK. MORE PROGRESS.</span>
+        <div class="hero-bottom-line"></div>
+        <span>YOUR JOURNEY STARTS HERE <span class="bottom-arrow">↓</span></span>
+      </div>
+    </section>
+
+    <section class="section roadmaps-section" id="roadmaps">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">FIND YOUR DIRECTION</span><h2>Choose a path. <span class="muted-heading">Build your future.</span></h2></div>
+          <p>Explore popular tech careers and discover the skills, tools, and projects that can help you get there.</p>
+        </div>
+
+        <div class="roadmap-grid">
+          <article class="career-card">
+            <div class="career-card-top"><div class="career-icon icon-blue">&lt;/&gt;</div><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <span class="career-tag">POPULAR PATH</span>
+            <h3>Backend Developer</h3>
+            <p>Build the logic, APIs, and systems that power applications.</p>
+            <div class="skill-tags"><span>Java</span><span>SQL</span><span>Spring Boot</span></div>
+            <div class="card-bottom"><span>Beginner friendly</span><a href="roadmap.html" class="text-link">View roadmap <span>→</span></a></div>
+          </article>
+          <article class="career-card">
+            <div class="career-card-top"><div class="career-icon icon-orange">◈</div><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <span class="career-tag">DESIGN + CODE</span>
+            <h3>Frontend Developer</h3>
+            <p>Create engaging, accessible interfaces for the web.</p>
+            <div class="skill-tags"><span>HTML/CSS</span><span>JavaScript</span><span>React</span></div>
+            <div class="card-bottom"><span>Build as you learn</span><a href="#features" class="text-link" data-career="Frontend Developer">View roadmap <span>→</span></a></div>
+          </article>
+          <article class="career-card">
+            <div class="career-card-top"><div class="career-icon icon-purple">⌘</div><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <span class="career-tag">END-TO-END</span>
+            <h3>Full-Stack Developer</h3>
+            <p>Connect beautiful user experiences with reliable backends.</p>
+            <div class="skill-tags"><span>JavaScript</span><span>APIs</span><span>Databases</span></div>
+            <div class="card-bottom"><span>Learn both sides</span><a href="#features" class="text-link" data-career="Full-Stack Developer">View roadmap <span>→</span></a></div>
+          </article>
+          <article class="career-card">
+            <div class="career-card-top"><div class="career-icon icon-green">▦</div><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <span class="career-tag">DATA + INSIGHTS</span>
+            <h3>Data Analyst</h3>
+            <p>Turn raw data into clear insights that support decisions.</p>
+            <div class="skill-tags"><span>Python</span><span>SQL</span><span>Visualization</span></div>
+            <div class="card-bottom"><span>Think analytically</span><a href="#features" class="text-link" data-career="Data Analyst">View roadmap <span>→</span></a></div>
+          </article>
+        </div>
+        <div class="center-action"><a href="#features" class="button button-outline">Explore preparation tools <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-heading section-heading-centered">
+          <span class="section-kicker">EVERYTHING IN ONE PLACE</span>
+          <h2>Prepare smarter, <span class="muted-heading">not harder.</span></h2>
+          <p>A simple system to turn your placement goals into practical, manageable actions.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-item"><div class="feature-icon feature-violet">◎</div><h3>Career Roadmaps</h3><p>Follow a structured sequence of skills and milestones for your chosen career.</p><a href="#roadmaps" class="feature-link">Find your path <span>→</span></a></article>
+          <article class="feature-item"><div class="feature-icon feature-mint">⌁</div><h3>Skills & Resources</h3><p>Know what to learn next with curated topics, practice ideas, and learning resources.</p><a href="#how-it-works" class="feature-link">Plan your learning <span>→</span></a></article>
+          <article class="feature-item"><div class="feature-icon feature-peach">⌘</div><h3>DSA & Coding Practice</h3><p>Strengthen problem-solving through consistent coding practice and revision.</p><a href="#how-it-works" class="feature-link">Build consistency <span>→</span></a></article>
+          <article class="feature-item"><div class="feature-icon feature-blue">✧</div><h3>Placement Readiness</h3><p>Prepare for aptitude, technical interviews, resumes, and company rounds.</p><a href="#how-it-works" class="feature-link">Get interview-ready <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="how-it-works">
+      <div class="container process-grid">
+        <div class="process-copy">
+          <span class="section-kicker">A CLEARER WAY FORWARD</span>
+          <h2>Small steps.<br><span class="muted-heading">Real progress.</span></h2>
+          <p>You don't need to learn everything at once. Start with a direction, follow a plan, and keep building.</p>
+          <a href="#roadmaps" class="button button-primary">Start exploring <span>→</span></a>
+        </div>
+        <div class="process-list">
+          <article class="process-step"><span class="process-number">01</span><div><h3>Choose your career goal</h3><p>Explore roles and choose one that matches your interests.</p></div><span class="process-check">✓</span></article>
+          <article class="process-step"><span class="process-number">02</span><div><h3>Follow your roadmap</h3><p>Learn the core concepts in a practical order.</p></div><span class="process-check">✓</span></article>
+          <article class="process-step"><span class="process-number">03</span><div><h3>Practice and build projects</h3><p>Turn knowledge into skills you can demonstrate.</p></div><span class="process-check">✓</span></article>
+          <article class="process-step"><span class="process-number">04</span><div><h3>Prepare for placements</h3><p>Revise, practice interviews, and present your work confidently.</p></div><span class="process-check">↗</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div class="cta-decoration" aria-hidden="true">✳</div>
+        <div><span class="section-kicker">YOUR NEXT CHAPTER STARTS NOW</span><h2>Make your next step count.</h2><p>Choose a direction today. Keep improving every day.</p></div>
+        <a href="#roadmaps" class="button button-light">Find your career path <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M25.8 12.5 22 22l-9.8 5.5 3.8-9.5z" fill="currentColor"/></svg></span><span>Career<span class="brand-accent">Compass</span></span></a>
+        <p>Helping students find direction, build skills, and move toward their career goals.</p>
+      </div>
+      <div class="footer-column"><h4>Explore</h4><a href="#roadmaps">Career roadmaps</a><a href="#features">Preparation tools</a><a href="#how-it-works">How it works</a></div>
+      <div class="footer-column"><h4>Prepare</h4><a href="#features">Skills & resources</a><a href="#features">Coding practice</a><a href="#features">Interview preparation</a></div>
+      <div class="footer-column"><h4>Keep in touch</h4><p class="footer-small">Keep learning. Keep building. Keep moving forward.</p><a href="#home" class="back-top">Back to top ↑</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Career Compass. Built for student growth.</span><span>Learn with purpose <span class="footer-heart">♥</span></span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

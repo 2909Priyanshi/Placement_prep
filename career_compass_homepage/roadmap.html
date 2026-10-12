@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Follow a practical Java backend developer learning roadmap with milestones, projects, and progress tracking.">
+  <title>Java Backend Roadmap | Career Compass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="roadmap.css">
+  <script src="roadmap.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Career Compass home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M25.8 12.5 22 22l-9.8 5.5 3.8-9.5z" fill="currentColor"/><circle cx="20" cy="20" r="2" fill="#fff"/></svg>
+        </span>
+        <span>Career<span class="brand-accent">Compass</span></span>
+      </a>
+      <a class="back-link" href="index.html">← Back to home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="roadmap-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR CAREER ROADMAP</span>
+          <p class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Career Roadmaps <span>/</span> Java Backend</p>
+          <h1>Become a <span class="gradient-text">Java Backend</span> Developer.</h1>
+          <p class="hero-description">A practical, beginner-friendly path from Java fundamentals to building and deploying backend applications. Learn in stages, build projects, and track your progress as you go.</p>
+          <div class="hero-meta">
+            <span>◷ Flexible, self-paced</span><span>▣ 6 learning stages</span><span>⌘ Project-focused</span>
+          </div>
+          <a class="button button-primary" href="#learning-path">Start learning <span>↓</span></a>
+        </div>
+        <aside class="progress-card" aria-label="Your roadmap progress">
+          <div class="progress-card-top"><span class="section-kicker">YOUR PROGRESS</span><span class="progress-status"><i></i> IN PROGRESS</span></div>
+          <div class="progress-number"><strong id="progressPercent">0%</strong><span id="progressCount">0 of 18 topics complete</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Roadmap completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+          <p class="progress-note" id="progressMessage">Your journey starts with one small step.</p>
+          <div class="progress-card-bottom"><span>Progress saves automatically on this device.</span><button type="button" class="reset-button" id="resetProgress">Reset</button></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section learning-section" id="learning-path">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">THE LEARNING PATH</span><h2>Build skills in the <span class="muted-heading">right order.</span></h2></div>
+          <p>Mark a topic complete when you understand it and have practised it. You can return to any stage whenever you need a revision.</p>
+        </div>
+
+        <div class="roadmap-layout">
+          <div class="stages">
+            <article class="stage-card">
+              <div class="stage-number">01</div><div class="stage-content">
+                <div class="stage-heading"><div><span class="stage-label">FOUNDATION</span><h3>Java fundamentals & OOP</h3><p>Build a strong base before moving into frameworks.</p></div><span class="stage-time">Start here</span></div>
+                <div class="topic-list">
+                  <label class="topic"><input type="checkbox" data-topic="java-basics"><span class="custom-check"></span><span><strong>Java syntax and core concepts</strong><small>Variables, data types, operators, conditions, and loops</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="methods-arrays"><span class="custom-check"></span><span><strong>Methods, arrays, and strings</strong><small>Parameters, return values, arrays, String, and StringBuilder</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="oop"><span class="custom-check"></span><span><strong>Object-oriented programming</strong><small>Classes, objects, inheritance, polymorphism, abstraction, and interfaces</small></span></label>
+                </div>
+                <details class="resource-box"><summary>Practice ideas & resources</summary><p>Write small console programs, model real-world objects with classes, and solve beginner Java problems on <a href="https://www.geeksforgeeks.org/java/" target="_blank" rel="noopener noreferrer">GeeksforGeeks Java</a>.</p></details>
+              </div>
+            </article>
+
+            <article class="stage-card">
+              <div class="stage-number">02</div><div class="stage-content">
+                <div class="stage-heading"><div><span class="stage-label">PROBLEM SOLVING</span><h3>DSA & core Java tools</h3><p>Practise writing clear, efficient code.</p></div><span class="stage-time">Practise regularly</span></div>
+                <div class="topic-list">
+                  <label class="topic"><input type="checkbox" data-topic="collections"><span class="custom-check"></span><span><strong>Collections and generics</strong><small>ArrayList, HashMap, HashSet, Queue, Stack, and generics</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="dsa"><span class="custom-check"></span><span><strong>Data structures and algorithms</strong><small>Linked lists, stacks, queues, trees, sorting, searching, and Big-O</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="exceptions"><span class="custom-check"></span><span><strong>Exceptions, debugging, and testing basics</strong><small>Handle errors, read stack traces, and test edge cases</small></span></label>
+                </div>
+                <details class="resource-box"><summary>Practice ideas & resources</summary><p>Solve a few problems each week, explain your approach aloud, and revisit problems you could not solve independently. Resource: <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener noreferrer">GeeksforGeeks</a>.</p></details>
+              </div>
+            </article>
+
+            <article class="stage-card">
+              <div class="stage-number">03</div><div class="stage-content">
+                <div class="stage-heading"><div><span class="stage-label">DEVELOPER WORKFLOW</span><h3>Git, HTTP, and SQL</h3><p>Learn the tools and concepts backend work relies on.</p></div><span class="stage-time">Core skills</span></div>
+                <div class="topic-list">
+                  <label class="topic"><input type="checkbox" data-topic="git"><span class="custom-check"></span><span><strong>Git and GitHub</strong><small>Commits, branches, merge basics, README files, and repositories</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="http"><span class="custom-check"></span><span><strong>Web and HTTP fundamentals</strong><small>Client/server, request/response, status codes, JSON, and REST</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="sql"><span class="custom-check"></span><span><strong>SQL and relational databases</strong><small>Tables, keys, joins, CRUD, constraints, and basic indexes</small></span></label>
+                </div>
+                <details class="resource-box"><summary>Practice ideas & resources</summary><p>Use Git for every project, design a small database, and practise SQL queries. Resources: <a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer">Git documentation</a> and <a href="https://dev.mysql.com/doc/" target="_blank" rel="noopener noreferrer">MySQL documentation</a>.</p></details>
+              </div>
+            </article>
+
+            <article class="stage-card">
+              <div class="stage-number">04</div><div class="stage-content">
+                <div class="stage-heading"><div><span class="stage-label">BACKEND FRAMEWORK</span><h3>Spring Boot & REST APIs</h3><p>Turn Java knowledge into working web services.</p></div><span class="stage-time">Main milestone</span></div>
+                <div class="topic-list">
+                  <label class="topic"><input type="checkbox" data-topic="spring-basics"><span class="custom-check"></span><span><strong>Spring and Spring Boot basics</strong><small>Dependency injection, beans, configuration, and project setup</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="rest-api"><span class="custom-check"></span><span><strong>Build REST APIs</strong><small>Controllers, services, repositories, DTOs, and validation</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="jpa"><span class="custom-check"></span><span><strong>Connect Spring Boot to MySQL</strong><small>Spring Data JPA, entities, relationships, and CRUD operations</small></span></label>
+                </div>
+                <details class="resource-box"><summary>Practice ideas & resources</summary><p>Build an API with create, read, update, and delete operations, then test it with Postman. Follow the <a href="https://spring.io/guides" target="_blank" rel="noopener noreferrer">official Spring guides</a>.</p></details>
+              </div>
+            </article>
+
+            <article class="stage-card">
+              <div class="stage-number">05</div><div class="stage-content">
+                <div class="stage-heading"><div><span class="stage-label">BUILD & SHIP</span><h3>Projects, testing & deployment</h3><p>Show that you can apply what you have learnt.</p></div><span class="stage-time">Portfolio</span></div>
+                <div class="topic-list">
+                  <label class="topic"><input type="checkbox" data-topic="project-one"><span class="custom-check"></span><span><strong>Build a small CRUD project</strong><small>For example, a task manager or student notes API</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="testing"><span class="custom-check"></span><span><strong>Testing and security basics</strong><small>Unit tests, validation, password safety, and environment variables</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="deploy"><span class="custom-check"></span><span><strong>Deploy and document your project</strong><small>Deployment basics, API documentation, GitHub README, and screenshots</small></span></label>
+                </div>
+                <details class="resource-box"><summary>Project checklist</summary><p>Include a clear README, setup steps, sample API requests, meaningful commit history, input validation, and screenshots. Never commit passwords or API keys.</p></details>
+              </div>
+            </article>
+
+            <article class="stage-card">
+              <div class="stage-number">06</div><div class="stage-content">
+                <div class="stage-heading"><div><span class="stage-label">PLACEMENT PREPARATION</span><h3>Interview & job readiness</h3><p>Prepare to explain your work and solve problems under time constraints.</p></div><span class="stage-time">Keep revising</span></div>
+                <div class="topic-list">
+                  <label class="topic"><input type="checkbox" data-topic="java-interview"><span class="custom-check"></span><span><strong>Revise Java, OOP, SQL, and DBMS</strong><small>Practise explaining concepts with examples</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="mock-interviews"><span class="custom-check"></span><span><strong>Practise coding and mock interviews</strong><small>Talk through your reasoning and test edge cases</small></span></label>
+                  <label class="topic"><input type="checkbox" data-topic="resume"><span class="custom-check"></span><span><strong>Prepare resume and project explanations</strong><small>Describe your contribution, decisions, trade-offs, and learnings</small></span></label>
+                </div>
+                <details class="resource-box"><summary>Placement tip</summary><p>Prioritise fundamentals and genuine project understanding over collecting certificates. Be honest about what you built and what you are still learning.</p></details>
+              </div>
+            </article>
+          </div>
+
+          <aside class="sidebar">
+            <div class="side-card">
+              <span class="section-kicker">YOUR NEXT STEP</span>
+              <h3>Learn, practise, build.</h3>
+              <p>Don't rush to tick every box. Aim to understand each topic and use it in a small exercise or project.</p>
+              <a class="button button-primary button-full" href="https://spring.io/guides" target="_blank" rel="noopener noreferrer">Explore Spring guides ↗</a>
+            </div>
+            <div class="side-card project-card">
+              <div class="project-symbol">&lt;/&gt;</div><span class="section-kicker">SUGGESTED PROJECT</span>
+              <h3>Student Notes API</h3>
+              <p>Create an API where students can add, view, edit, and delete notes by subject.</p>
+              <ul><li>Java + Spring Boot</li><li>MySQL + Spring Data JPA</li><li>Test endpoints with Postman</li></ul>
+            </div>
+            <div class="side-card tip-card">
+              <span class="tip-icon">✦</span><h3>Remember</h3>
+              <p>Consistency beats speed. Even 30–45 minutes of focused practice can move you forward.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span>Career<span class="brand-accent">Compass</span></span></a><p>Small steps. Strong skills. Clear direction.</p><span>© <span id="year"></span> Career Compass</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
